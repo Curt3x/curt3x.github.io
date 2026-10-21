@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article class="article">
+  <p class="meta">
+    {% if page.difficulty %}<span class="tag d-{{ page.difficulty | downcase }}">{{ page.difficulty }}</span>{% endif %}
+    {% if page.os %}<span class="tag">{{ page.os }}</span>{% endif %}
+    {% for t in page.tags %}<span class="tag">{{ t }}</span>{% endfor %}
+    <span class="date">{{ page.date | date: "%d %b %Y" }}</span>
+  </p>
+  <h1 class="ptitle">{{ page.title }}</h1>
+  {% if page.lab %}<p class="note">Simulated lab environment: {{ page.lab }}</p>{% endif %}
+  {{ content }}
+</article>

@@ -1,0 +1,36 @@
+---
+layout: default
+title: Home
+---
+<section class="hero">
+  <div>
+    <p class="kicker">セキュリティ · Cybersecurity student</p>
+    <h1>Breaking things in the lab so I can defend them later.</h1>
+    <p class="lead">I'm AgusCanito. This is where I publish HackTheBox write-ups, threat hunting reports from my simulated environment, and the projects I build while studying for Security+, CCNA and CPTS.</p>
+    <p><a class="btn" href="{{ '/writeups/' | relative_url }}">Read write-ups</a> <a class="btn ghost" href="{{ '/about/' | relative_url }}">About me</a></p>
+  </div>
+  <img class="mascot" src="{{ '/assets/img/mascot.png' | relative_url }}" alt="AgusCanito mascot">
+</section>
+
+<h2 class="sec">Currently studying</h2>
+<div class="grid">
+{% for c in site.data.certs %}
+  <div class="card"><h3>{{ c.name }}</h3><div class="bar-bg"><div class="bar-fg" style="width:{{ c.progress }}%"></div></div><p class="mu">{{ c.progress }}% · {{ c.target }}</p></div>
+{% endfor %}
+</div>
+
+<h2 class="sec">Latest write-ups</h2>
+<div class="grid">
+{% assign w = site.writeups | sort: 'date' | reverse %}
+{% for p in w limit:3 %}
+  <a class="card link" href="{{ p.url | relative_url }}"><span class="tag d-{{ p.difficulty | downcase }}">{{ p.difficulty }}</span><h3>{{ p.title }}</h3><p class="mu">{{ p.summary }}</p></a>
+{% endfor %}
+</div>
+
+<h2 class="sec">Latest threat hunting reports</h2>
+<div class="grid">
+{% assign h = site.hunts | sort: 'date' | reverse %}
+{% for p in h limit:3 %}
+  <a class="card link" href="{{ p.url | relative_url }}"><span class="tag">Lab</span><h3>{{ p.title }}</h3><p class="mu">{{ p.summary }}</p></a>
+{% endfor %}
+</div>

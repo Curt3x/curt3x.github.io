@@ -1,0 +1,13 @@
+---
+title: Threat hunting
+lead: Reports from my simulated lab environment, not real incidents.
+---
+<div class="grid">
+{% assign h = site.hunts | sort: 'date' | reverse %}
+{% for p in h %}
+  <a class="card link" href="{{ p.url | relative_url }}">
+    <p class="meta">{% for t in p.tags %}<span class="tag">{{ t }}</span>{% endfor %}</p>
+    <h3>{{ p.title }}</h3><p class="mu">{{ p.summary }}</p>
+  </a>
+{% endfor %}
+</div>

@@ -1,0 +1,13 @@
+# Edit progress (0-100), target and notes whenever you like.
+- name: CompTIA Security+
+  progress: 40
+  target: "Target: Q1 2027"
+  notes: Domains covered so far - general concepts, threats and vulnerabilities.
+- name: Cisco CCNA
+  progress: 25
+  target: "Target: Q2 2027"
+  notes: Working through switching, VLANs and IP addressing in Packet Tracer.
+- name: HTB CPTS
+  progress: 15
+  target: "Target: Q4 2027"
+  notes: Penetration Tester path, module by module, with my own notes.

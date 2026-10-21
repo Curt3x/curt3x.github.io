@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title and page.url != "/" %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<meta name="theme-color" content="#0b1215">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+<header class="top"><div class="wrap bar">
+  <a class="logo" href="{{ '/' | relative_url }}">Agus<b>Canito</b></a>
+  <nav>
+    <a href="{{ '/about/' | relative_url }}">About</a>
+    <a href="{{ '/certifications/' | relative_url }}">Certifications</a>
+    <a href="{{ '/writeups/' | relative_url }}">HTB write-ups</a>
+    <a href="{{ '/hunting/' | relative_url }}">Threat hunting</a>
+    <a href="{{ '/projects/' | relative_url }}">Projects</a>
+  </nav>
+</div></header>
+<main class="wrap">{{ content }}</main>
+<footer><div class="wrap">© {{ 'now' | date: '%Y' }} AgusCanito · セキュリティ · Lab work is done in simulated environments.</div></footer>
+</body>
+</html>

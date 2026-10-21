@@ -1,0 +1,48 @@
+:root{--a:#3EC6C6;--a2:#2a9a9a;--bg:#0b1215;--bg2:#111d22;--line:#22393f;--tx:#dbe7e8;--mu:#8aa3a6;--e:#4fb477;--m:#e0b341;--h:#e07a41;--i:#d9534f}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:400 1rem/1.7 'Sora',system-ui,sans-serif;color:var(--tx);background:linear-gradient(180deg,#0b1215 0%,#0e1b20 100%) fixed;min-height:100vh;display:flex;flex-direction:column}
+main{flex:1;padding-bottom:4rem}
+.wrap{max-width:1000px;margin:0 auto;padding:0 1.25rem}
+a{color:var(--a);text-decoration:none}a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--a);outline-offset:3px}
+.top{border-bottom:1px solid var(--line);background:rgba(11,18,21,.92);position:sticky;top:0;z-index:5}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem 1.5rem;padding-top:.9rem;padding-bottom:.9rem}
+.logo{font-weight:700;font-size:1.2rem;color:var(--tx)}.logo b{color:var(--a)}.logo:hover{text-decoration:none}
+nav{display:flex;gap:1.2rem;flex-wrap:wrap;font-size:.92rem}nav a{color:var(--mu)}nav a:hover{color:var(--a);text-decoration:none}
+h1,h2,h3{line-height:1.25}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:2.5rem;align-items:center;padding:3.5rem 0 2rem}
+.hero h1{font-size:2.3rem;margin:.3rem 0 1rem}
+.kicker{font:500 .85rem 'IBM Plex Mono',monospace;color:var(--a);margin:0}
+.lead{color:var(--mu);max-width:62ch}
+.mascot{width:100%;max-width:340px;justify-self:center;border:1px solid var(--line);background:var(--bg2);display:block}
+.btn{display:inline-block;padding:.65rem 1.2rem;background:linear-gradient(135deg,var(--a),var(--a2));color:#06201f;font-weight:600;border:1px solid var(--a);margin-right:.5rem}
+.btn:hover{text-decoration:none;filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--a)}
+.sec{margin:3rem 0 1rem;padding-bottom:.5rem;border-bottom:1px solid var(--line);font-size:1.25rem}
+.ptitle{font-size:2rem;margin:2.5rem 0 .5rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1rem;margin-top:1rem}
+.card{display:block;padding:1.2rem;background:linear-gradient(160deg,var(--bg2),#0d171b);border:1px solid var(--line);border-left:3px solid var(--a);border-radius:0;color:var(--tx)}
+.card h3{margin:.5rem 0;font-size:1.05rem}
+.card.link:hover{text-decoration:none;border-color:var(--a)}
+.mu{color:var(--mu);font-size:.92rem;margin:.3rem 0 0}
+.bar-bg{height:8px;background:#0a1114;border:1px solid var(--line);margin:.6rem 0}
+.bar-fg{height:100%;background:linear-gradient(90deg,var(--a2),var(--a))}
+.tag{display:inline-block;font:500 .75rem 'IBM Plex Mono',monospace;padding:.1rem .5rem;border:1px solid var(--line);color:var(--mu);margin:0 .35rem .35rem 0}
+.d-easy{color:var(--e);border-color:var(--e)}.d-medium{color:var(--m);border-color:var(--m)}.d-hard{color:var(--h);border-color:var(--h)}.d-insane{color:var(--i);border-color:var(--i)}
+.meta{margin:0}.date{font:400 .8rem 'IBM Plex Mono',monospace;color:var(--mu)}
+.filters{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1.2rem}
+.filters button{font:500 .85rem 'IBM Plex Mono',monospace;background:transparent;color:var(--mu);border:1px solid var(--line);padding:.35rem .9rem;cursor:pointer;border-radius:0}
+.filters button.on,.filters button:hover{color:var(--a);border-color:var(--a)}
+.about{display:grid;grid-template-columns:240px 1fr;gap:2rem;margin-top:1.5rem}
+.avatar{width:100%;border:1px solid var(--line);display:block}
+.article{max-width:760px}
+.article h2{margin-top:2rem;color:var(--a);font-size:1.3rem}
+.note{border:1px solid var(--line);border-left:3px solid var(--m);padding:.6rem 1rem;background:var(--bg2);color:var(--mu);font-size:.9rem}
+pre{background:#080e10;border:1px solid var(--line);padding:1rem;overflow-x:auto;font:400 .88rem/1.5 'IBM Plex Mono',monospace}
+code{font-family:'IBM Plex Mono',monospace;font-size:.9em;color:#a6ecec}pre code{color:var(--tx)}
+table{border-collapse:collapse;width:100%;display:block;overflow-x:auto}th,td{border:1px solid var(--line);padding:.5rem .8rem;text-align:left}th{background:var(--bg2)}
+img{max-width:100%}
+footer{border-top:1px solid var(--line);padding:1.5rem 0;color:var(--mu);font-size:.85rem}
+@media(max-width:720px){.hero,.about{grid-template-columns:1fr}.hero h1{font-size:1.8rem}.mascot{max-width:260px}.avatar{max-width:200px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

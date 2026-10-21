@@ -1,0 +1,28 @@
+---
+title: HTB write-ups
+lead: Retired HackTheBox machines only. No flags, hashes or passwords.
+---
+<div class="filters">
+  <button class="on" data-f="all">All</button><button data-f="easy">Easy</button><button data-f="medium">Medium</button><button data-f="hard">Hard</button><button data-f="insane">Insane</button>
+</div>
+<div class="grid" id="list">
+{% assign w = site.writeups | sort: 'date' | reverse %}
+{% for p in w %}
+  <a class="card link" data-d="{{ p.difficulty | downcase }}" href="{{ p.url | relative_url }}">
+    <p class="meta"><span class="tag d-{{ p.difficulty | downcase }}">{{ p.difficulty }}</span><span class="tag">{{ p.os }}</span></p>
+    <h3>{{ p.title }}</h3><p class="mu">{{ p.summary }}</p>
+  </a>
+{% endfor %}
+</div>
+<script>
+document.querySelectorAll('.filters button').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.querySelectorAll('.filters button').forEach(function(x){x.classList.remove('on')});
+    b.classList.add('on');
+    var f=b.dataset.f;
+    document.querySelectorAll('#list .card').forEach(function(c){
+      c.style.display=(f==='all'||c.dataset.d===f)?'':'none';
+    });
+  });
+});
+</script>

@@ -1,0 +1,13 @@
+---
+title: Projects
+lead: Things I've built while learning.
+---
+<div class="grid">
+{% assign pr = site.projects | sort: 'date' | reverse %}
+{% for p in pr %}
+  <a class="card link" href="{{ p.url | relative_url }}">
+    <p class="meta">{% for t in p.tags %}<span class="tag">{{ t }}</span>{% endfor %}</p>
+    <h3>{{ p.title }}</h3><p class="mu">{{ p.summary }}</p>
+  </a>
+{% endfor %}
+</div>

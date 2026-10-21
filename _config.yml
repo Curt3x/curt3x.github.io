@@ -1,0 +1,15 @@
+title: AgusCanito
+description: Cybersecurity blog - HackTheBox write-ups, threat hunting labs and projects.
+url: ""        # for a user site (username.github.io) leave both empty
+baseurl: ""
+markdown: kramdown
+collections:
+  writeups: {output: true, permalink: /writeups/:name/}
+  hunts:    {output: true, permalink: /hunting/:name/}
+  projects: {output: true, permalink: /projects/:name/}
+defaults:
+  - {scope: {path: "", type: writeups}, values: {layout: post}}
+  - {scope: {path: "", type: hunts},    values: {layout: post}}
+  - {scope: {path: "", type: projects}, values: {layout: post}}
+  - {scope: {path: ""}, values: {layout: page}}
+exclude: [README.md]
