@@ -4,7 +4,7 @@ title: About me
 lead: Cybersecurity learner focused on offensive fundamentals and detection.
 ---
 <div class="about">
-<img class="avatar" src="{{ '/assets/img/avatar.jpg' | relative_url }}" alt="Profile picture of AgusCanito">
+<img class="avatar" src="{{ '/assets/img/avatar.png' | relative_url }}" alt="Profile picture of AgusCanito">
 <div markdown="1">
 
 Hi, I'm **AgusCanito**. I'm building a career in cybersecurity by doing the work: solving retired HackTheBox machines, hunting threats in a simulated environment I run myself, and documenting what I learn.
