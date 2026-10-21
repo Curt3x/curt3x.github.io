@@ -1,4 +1,5 @@
 ---
+permalink: /about/
 title: About me
 lead: Cybersecurity learner focused on offensive fundamentals and detection.
 ---

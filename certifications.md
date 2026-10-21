@@ -1,4 +1,5 @@
 ---
+permalink: /certifications/
 title: Certifications
 lead: What I'm studying for. None of these are earned yet; I'll mark them as completed when they are.
 ---
